@@ -1,6 +1,30 @@
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap');
 
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: honeydew;
+}
+
+#hero {
+    background-color: lightgray;
+    background-image: url('assets/images/man-looking-at-mountains.webp');
+    background-size: cover;
+    background-position: 50% 70%;
+    min-height: 500px;
+    padding: 5% 7%;
+}
+
+/* {
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+} */
+
 /* * {
   margin: 0;
   padding: 0;
