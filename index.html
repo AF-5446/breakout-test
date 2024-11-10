@@ -20,14 +20,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<!--Forces footer to bottom (flex class)-->
+
+<body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sharp-corners" data-bs-toggle="modal">
         <div class="container">
-            <a class="navbar-brand" href="assets/favicon/tranquil.png">Inner Tranquillity</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/favicon/tranquil.png" alt="Inner Tranquillity" width="30" height="30">
+                Inner Tranquillity
+            </a>
+            <button type="button" class="btn btn-primary btn-lg custom-btn sharp-corners" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Immediate Help
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -35,10 +40,10 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#common-issues">Common Issues</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#positiveaff">Positive Affirmations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Disabled</a>
@@ -49,7 +54,7 @@
     </nav>
 
     <!-- header Section -->
-    <header id="hero" class="container">
+    <header id="hero" class="container-fluid">
         <!-- Section with hero image -->
         <section class="row">
             <!-- text center class used to center all text inside column -->
@@ -66,12 +71,89 @@
     </header>
 
     <!-- Main -->
-     <main>
-        
-     </main>
+    <main class="container my-4">
+        <section id="about aboutus" class="card mb-3 mt-3 sharp-corners">
+            <div class="card-body">
+                <h3 class="card-title">About Us </h3>
+                <p class="card-text">At Mental Health Matters, we believe in promoting mental health awareness,
+                    providing education, and connecting individuals with the support they need. Our goal is
+                    to create a society where mental health is understood, respected, and prioritized."</p>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
+        <!-- Recognizing Common Issues -->
+        <section id="common-issues">
+            <h2>Recognizing Common Issues</h2>
+            <p>Mental health issues can often be identified by certain signs and symptoms. Here are some common issues:
+            </p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Depression</h5>
+                            <p class="card-text">Persistent sadness, loss of interest, changes in appetite, sleep
+                                issues, fatigue, and difficulty concentrating.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Anxiety</h5>
+                            <p class="card-text">Excessive worry, restlessness, physical symptoms like sweating and
+                                trembling, avoidance, and sleep disturbances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Stress</h5>
+                            <p class="card-text">Irritability, muscle tension, headaches, stomach issues, and difficulty
+                                relaxing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positive Affirmations -->
+        <section id="possitiveaff" class="text-center my-4">
+            <h2>Positive Affirmations</h2>
+            <p class="lead">"You are stronger than you think."</p>
+            <p class="lead">"Every day is a new opportunity."</p>
+            <p class="lead">"Take it one step at a time."</p>
+        </section>
+
+        <section id="resources">
+            <h2 class="text-center">Resources</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="https://www.mind.org.uk/" class="btn btn-outline-info btn-block mb-2">Mind</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.nhs.uk/mental-health/" class="btn btn-outline-info btn-block mb-2">NHS Mental
+                        Health</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.cdc.gov/mental-health/caring/index.html"
+                        class="btn btn-outline-info btn-block mb-2">CDC Mental Health Resources</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="tel:116123" class="btn btn-outline-info btn-block mb-2">Samaritans Number</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="tel:85258" class="btn btn-outline-info btn-block mb-2">SHOUT Number</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="tel:08006894141" class="btn btn-outline-info btn-block mb-2">Papyrus HOPELINEUK Number</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer class forces to bottom of page.-->
+    <footer class="mt-auto">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -83,9 +165,9 @@
                 <div class="col-lg-4">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#aboutus">Home</a></li>
+                        <li><a href="#common-issues">Common Issues</a></li>
+                        <li><a href="#positiveaff">Positive Affirmations</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -93,12 +175,42 @@
                     <h3>Contact Us</h3>
                     <p>123 Main Street</p>
                     <p>City, State 12345</p>
-                    <p>Email:
+                    <p>Email: InnerTranQ@email.com</p>
+                </div>
+            </div>
+        </div>          
     </footer>
 
     <!-- Modal -->
-
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Immediate Help</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>If you feel yourself or another is in distress, tap one of the options below to speak to a member
+                        of a team</p>
+                </div>
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <a href="tel:116123" class="btn btn-outline-info btn-block mb-2">Samaritans Number</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="tel:85258" class="btn btn-outline-info btn-block mb-2">SHOUT text line</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="tel:08006894141" class="btn btn-outline-info btn-block mb-2">Papyrus HOPELINEUK
+                            Number</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cc99a6b426.js" crossorigin="anonymous"></script>
