@@ -1,28 +1,54 @@
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap');
 
+/*
+- Colors:
+  - blue: #51c7eb
+  - light green: #c1ee9a
+  - Tertiary: #f1f1a7
+*/
+
+:root {
+  --primary-font: 'Inter', sans-serif;
+  --primary-color: #51c7eb; /*Blue*/
+  --secondary-color: #c1ee9a; /*Light Green*/
+  --card-color: #f1f1a7; /*Yellow*/
+  --color: #2a2e30; /*Charcoal*/
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #51c7eb;
 }
 
-nav {
-  background-color: #51c7eb ;
+.custom-btn {
+  background-color: var(--secondary-color);
+  color: var(--color);
+  border: none;
+/*  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer; */
 }
 
-nav .custom-btn {
-  background-color: #c1ee9a;
-  border: #c1ee9a;
-  color: black;
+/* .line-spacing {
+  line-height: 1.5;
 }
+*/
 
 .sharp-corners {
   border-radius: 0;
 }
 
-#about {
-  background-color: #e3f8d1;
+.card-body {
+  border-radius: 1;
+  /*background-color:;*/
 }
+
+#about {
+  background-color: var(--secondary-color);
+}
+
+#resources 
 
 #hero {
     background-color: lightgray;
@@ -32,6 +58,14 @@ nav .custom-btn {
     min-height: 400px;
     padding: 5% 7%;
     color: white;
+}
+
+footer {
+  background-color: var(--card-color);
+  color: charcoal;
+  text-align: center;
+  padding: 1rem;
+  list-style-type: none;
 }
 
 /* {
